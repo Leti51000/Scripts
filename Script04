@@ -1,1 +1,5 @@
 #Sauvegarde automatisé des fichiers client sur C:SAV
+
+#Copier le dossier document de mon user client et le coller dans le dossier du serveur dans C:/SAV à son nom
+
+Copy-Item -Path $Env:USERPROFILE\Documents -Destination \\SERVADACME\SAV\$env:USERNAME -Recurse
