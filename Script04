@@ -2,4 +2,11 @@
 
 #Copier le dossier document de mon user client et le coller dans le dossier du serveur dans C:/SAV à son nom
 
+Try{
 Copy-Item -Path $Env:USERPROFILE\Documents -Destination \\SERVADACME\SAV\$env:USERNAME -Recurse
+}
+Catch{
+Write-Host "Erreur de sauvegarde"
+
+exit 1
+}
