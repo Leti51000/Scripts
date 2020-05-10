@@ -11,3 +11,9 @@ Write-Host "Erreur de sauvegarde"
 exit 1
 }
 Write-Host "Sauvegarde effectuée avec succés"
+
+#Si sauvegarde faite, l'ordinateur s'eteint
+
+Stop-computer -ComputerName localhost
+
+exit 0
